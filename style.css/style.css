@@ -1,0 +1,62 @@
+html {
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+.cf:after {
+  clear: both;
+}
+.cf {
+  *zoom: 1;
+}
+body {
+  margin: 0;
+  background-color: #e6e9ed;
+  font-family: "Lato", sans-serif;
+}
+head {
+  background-color: #254d86;
+}
+
+/* joulukalenterin tyyli */
+ul#kalenteriLuukut {
+	position: relative;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+#kalenteriLuukut li {
+	position: absolute;
+}
+#kalenteriLuukut li a {
+	color: #fff;
+	width: 100%;
+	height: 100%;
+	font-size: 24px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-decoration: none;
+	border: 1px #fff solid;
+}
+#kalenteriLuukut li a:not(.disabled):hover {
+	color: #fff;
+	background-color: transparent;
+	background-color: rgba(255,255,255,0.15);
+}
+#kalenteriLuukut li a.disabled {
+	border-color: #b6fe98;
+	background-color: rgba(196,254,171,0.15);
+	color: #b6fe98;
+	cursor: default;
+}
